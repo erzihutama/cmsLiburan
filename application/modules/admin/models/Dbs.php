@@ -36,5 +36,12 @@ class Dbs extends CI_Model{
       }
   }
 
+  function tampil_budaya(){
+    $dml = "SELECT * FROM t_tempat_budaya WHERE `penilaian` = '8'";
+    $query = $this->db->query($dml)->result();
+    return $query;
+  }
+
+
 
 }
